@@ -2,9 +2,18 @@ echo "enter three numbers"
 read a
 read b
 read c
-s=`expr $a+$b+$c`
-echo "sum is $s"
-avg=`expr $s/3`
-echo "average is $avg"
-p=`expr $a\*$b\*$c`
-echo "product is $p"
+if [ $a  -gt $b ]
+then
+if [$a -gt $c ]
+then
+echo "largest is $a"
+else
+echo "largest is $c"
+fi
+elif [ $b -gt $c ]
+then
+echo "largest is $b"
+else
+echo "largest is $c"
+fi
+
