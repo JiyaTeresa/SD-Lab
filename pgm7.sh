@@ -1,19 +1,10 @@
-echo "enter three numbers"
-read a
-read b
-read c
-if [ $a  -gt $b ]
-then
-if [$a -gt $c ]
-then
-echo "largest is $a"
-else
-echo "largest is $c"
-fi
-elif [ $b -gt $c ]
-then
-echo "largest is $b"
-else
-echo "largest is $c"
-fi
-
+echo "enter a number"
+read n
+f=1
+i=0
+while [ $i -ne $n ]
+do
+i=`expr $i + 1` 
+f=`expr $f \* $i`
+done
+echo "factorial is $f"
